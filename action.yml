@@ -1,6 +1,6 @@
 name: 'BundleTool Action'
 description: 'This action will help you convert your aab to signed apk file.'
-author: 'Mukesh Solanki'
+author: 'sipgate'
 branding:
   icon: 'check-circle'  
   color: 'green'
@@ -9,8 +9,8 @@ inputs:
   aabFile:
     description: 'Path to your aab file'
     required: true
-  base64Keystore:
-    description: 'The key used to sign the apk encoded in base 64'
+  keystoreFile:
+    description: 'Path to your keystore file'
     required: true
   keystorePassword:
     description: 'The keystore password'
