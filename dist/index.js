@@ -6309,7 +6309,7 @@ const io = __nccwpck_require__(436);
 const fs = __nccwpck_require__(147);
 const path = __nccwpck_require__(17);
 
-const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.9.0/bundletool-all-1.9.0.jar";
+const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.13.0/bundletool-all-1.13.0.jar";
 
 async function run() {
     try {
