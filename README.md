@@ -13,16 +13,9 @@ This action will help you convert your aab to signed apk file.
 
 **Required:** The relative path in your project where your Android bundle file will be located
 
-### `base64Keystore`
+### `KeystoreFile`
 
-**Required:** The base64 encoded signing key used to sign your apk
-
-This action will directly decode this input to a file to sign your release with. You can prepare your key by running this command on linux systems.
-
-```bash
-openssl base64 < some_signing_key.jks | tr -d '\n' | tee some_signing_key.jks.base64.txt
-```
-Then copy the contents of the `.txt` file to your GH secrets
+**Required:** The signing key used to sign your apk
 
 ### `keystoreAlias`
 
@@ -52,10 +45,10 @@ The output variable `signedReleaseFile` can be used in a release action.
 steps:
   - name: Convert aab to apk
     id: convert_aab
-    uses: mukeshsolanki/bundletool-action@v1.0.0
+    uses: sipgate/bundletool-action@v1.2.0
     with:
       aabFile: app/build/outputs/bundle/release/app-release.aab
-      base64Keystore: ${{ secrets.BASE64_KEY }}
+      keystoreFile: ${{ KEYSTORE_FILE }}
       keystorePassword: ${{ secrets.PASSWORD }}
       keystoreAlias: ${{ secrets.ALIAS }}
       keyPassword: ${{ secrets.PASSWORD }}
