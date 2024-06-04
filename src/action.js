@@ -4,7 +4,7 @@ const tc = require("@actions/tool-cache");
 const io = require("@actions/io");
 const path = require("path");
 
-const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.13.0/bundletool-all-1.13.0.jar";
+const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.16.0/bundletool-all-1.16.0.jar";
 
 async function run() {
     try {
