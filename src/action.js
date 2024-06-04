@@ -29,7 +29,7 @@ async function run() {
 
         const downloadPath = await tc.downloadTool(BUNDLETOOL_URL);
 
-        await io.mv(downloadPath, bundleToolFile);
+        await io.cp(downloadPath, bundleToolFile);
 
         core.info(`${bundleToolFile} moved to directory`);
 
