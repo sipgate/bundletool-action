@@ -31300,7 +31300,7 @@ const tc = __nccwpck_require__(7784);
 const io = __nccwpck_require__(7436);
 const path = __nccwpck_require__(1017);
 
-const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.13.0/bundletool-all-1.13.0.jar";
+const BUNDLETOOL_URL = "https://github.com/google/bundletool/releases/download/1.16.0/bundletool-all-1.16.0.jar";
 
 async function run() {
     try {
@@ -31325,7 +31325,7 @@ async function run() {
 
         const downloadPath = await tc.downloadTool(BUNDLETOOL_URL);
 
-        await io.mv(downloadPath, bundleToolFile);
+        await io.cp(downloadPath, bundleToolFile);
 
         core.info(`${bundleToolFile} moved to directory`);
 
